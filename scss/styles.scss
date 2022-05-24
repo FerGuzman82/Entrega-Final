@@ -1,0 +1,77 @@
+
+@import "variables";
+@import "mixins";
+@import "header";
+@import "contenedores";
+@import "footer";
+@import "responsive";
+
+
+
+
+/*INICIO-PORTADA*/  
+
+.portada{
+    @include flex-column-center;
+    height: auto;
+}
+    
+.centrado{
+    @include flex-column-center;
+    color: $azul-general; }
+
+.galeria{
+    box-shadow: $sombra-general;
+ }
+
+.carousel-caption{
+    border: black solid 1px;
+    background-color: #1f31449d;
+}
+
+ //EXTEND
+
+ .boton {
+    display: inline-block;
+    width:90px;
+    background-color:#1f3144;
+    text-align:center;
+    color:white;
+    border:1px transparent black;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    text-decoration: none
+}
+ .boton--serv{
+    @extend .boton;
+    width:290px;
+    margin-top: 10px;
+}
+
+.boton--cerrar{
+    @extend .boton;
+    border:1px solid orange;
+
+}
+
+//MAP
+
+$redes: (
+	twitter: #51b0f857,
+	facebook: #2956a3,  
+	instagram:  #f8cc51,
+);
+
+@each $red, $color in $redes {
+    .red--#{$red} {
+        background: $color;
+        &:hover {
+            background: #51f8e2;
+            .red__nombre {
+                color: $color;
+            }
+        }
+    }
+}
+    

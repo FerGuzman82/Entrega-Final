@@ -1,0 +1,218 @@
+//SECCIÓN INICIO
+
+.containerIni{
+  display:grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto auto auto 200px 350px;
+  grid-template-areas: "carrusel carrusel carrusel carrusel"
+                       "titulo titulo titulo titulo"
+                       "item1 item2 item3 item4"
+                       "subtitulo1 subtitulo1 subtitulo1 subtitulo1"
+                       "clientes clientes clientes clientes";
+  margin-bottom: 10px;
+}
+
+.carrusel{
+  grid-area: carrusel;
+  margin: auto;
+}
+
+.titulo{
+  grid-area: titulo;
+  margin: auto;
+}
+
+.item1{
+  grid-area: item1;
+  margin: auto;
+}
+
+.item2{
+  grid-area: item2;
+  margin: auto;
+}
+
+.item3{
+  grid-area: item3;
+  margin: auto;
+}
+
+.item4{
+  grid-area: item4;
+  margin: auto;
+}
+
+.subtitulo1{
+  grid-area: subtitulo1; 
+  @include flex-column-center;
+  background-color: $azul-general;
+  color: white;
+  margin: 20px 0 20px 0;
+  }
+
+.clientes{
+  grid-area: clientes;
+  margin: auto;
+}
+
+//SECCIÓN NOSOTROS
+
+.containerNos{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "section section"
+                         "parrafo parrafo"
+                         "direccion1 direccion2"
+                         "enfoque enfoque";
+    margin-bottom: 10px;
+    
+     section{
+         grid-area: section;
+         @include flex-column-center;
+         height: 150px;
+         background-color: $azul-general;
+         margin: 20px 0 20px 0;
+         color: white;
+    }
+
+    .parrafo{
+      grid-area: parrafo;
+      padding: 10px;
+      @include flex-column-center;
+      font-size: large;
+  }
+
+     .direccion1{
+         grid-area: direccion1;
+         margin: auto;
+     }
+  
+     .direccion2{
+         grid-area: direccion2;
+         margin: auto;
+     }
+     .enfoque{
+       grid-area: enfoque;
+       margin: 100px;
+       padding: 10px;
+       @include flex-column-center;
+       box-shadow: $sombra-general;
+     }
+    } 
+  
+//SECCIÓN SERVICIOS
+  
+  .containerSer{
+      display:grid;
+      grid-template-columns: 25% 25% 25% 25%;
+      grid-template-rows: 300px auto auto auto;
+      grid-template-areas: "section section section section"
+                           "servicio1 servicio2 servicio3 servicio4";
+      column-gap: 5px;
+      margin-bottom: 10px;
+  
+  
+        section{
+            grid-area: section;
+            @include flex-column-center;
+            padding: 10px;
+            background: $gradiente-general;
+            margin-bottom: 10px;
+        }
+        
+        .servicio1{
+            grid-area: servicio1;
+            margin: auto;
+        }
+        
+        .servicio2{
+            grid-area: servicio2;
+            margin: auto;
+        }
+        
+        .servicio3{
+            grid-area: servicio3;
+            margin: auto;
+        }
+        
+        .servicio4{
+            grid-area: servicio4;
+            margin: auto;
+        }
+}
+    
+//SECCION NOTICIAS
+  
+  .containerNot{
+    width: 100%;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "section section section"
+                         "noticia1 noticia2 noticia3"
+                         "subtitulo subtitulo subtitulo"
+                         "blog blog blog";
+                                             
+ 
+      section {
+        grid-area: section;
+        @include flex-column-center;
+        height: 150px;
+        background-color: $azul-general;
+        color: white;
+      }
+      
+      .noticia1{
+        grid-area: noticia1;
+        @include flex-column-center;
+        
+      }
+      
+      .noticia2{
+        grid-area: noticia2;
+        @include flex-column-center;
+      }
+      
+      .noticia3{
+        grid-area: noticia3;
+        @include flex-column-center;
+      }
+
+      .subtitulo{
+        grid-area: subtitulo;
+        @include flex-column-center;
+        background-color: $azul-general;
+        color: white;
+      }
+
+      .blog{
+        grid-area: blog;
+        @include flex-row-center;
+      }
+      
+}
+  
+//CONTACTO
+
+  .containerCon{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: "mapa formulario";
+    column-gap: 5px;
+    margin-bottom: 10px;
+ 
+        .mapa{
+          grid-area: mapa;
+          @include flex-column-center;
+          padding: 10px;
+          margin-bottom: 10px;
+        }
+
+        .formulario{
+          grid-area: formulario;
+        }
+}
